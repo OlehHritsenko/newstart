@@ -54,6 +54,10 @@ body {
 
 .images_wrapper-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 280px;
 }
 
 .images_item {
@@ -63,10 +67,13 @@ body {
     z-index: -1;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .images_item-content {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .images_item-title {
@@ -79,7 +86,7 @@ body {
 }
 
 .images_item-text {
-    display: inline-block;
+    text-align: left;
     font-family: 'Poppins';
     font-style: normal;
     color: #FFFFFF;
@@ -124,7 +131,7 @@ body {
 
 @media (max-width: 767px) {
     .container {
-        width: 320px;
+        width: 100%;
         padding: 0 20px;
         margin-top: 80px;
     }
@@ -155,10 +162,6 @@ body {
         margin-top: 15px;
     }
 
-    .images_wrapper {
-        text-align: center;
-    }
-
     .images_list {
         margin-top: 40px;
         margin-bottom: 80px;
@@ -169,10 +172,10 @@ body {
     }
 
     .images_wrapper-card {
-        width: 280px;
+        width: 100%;
         height: 373px;
         margin: 0 auto;
-        padding: 190px 25px 25px 25px;
+        padding: 0px 25px 30px 25px;
     }
 
     .images_item-title {
@@ -208,9 +211,9 @@ body {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .container {
-        width: 760px;
+        width: 100%;
         padding: 0 15px;
         margin-top: 80px;
     }
@@ -242,7 +245,6 @@ body {
 
     .images_wrapper {
         margin: 0 auto;
-        text-align: center;
     }
 
     .images_list {
@@ -262,9 +264,9 @@ body {
     }
 
     .images_wrapper-card {
-        width: 355px;
+        width: 49%;
         height: 450px;
-        padding: 265px 40px 40px 40px;
+        padding: 0 40px 40px 40px;
     }
 
     .images_item-title {
@@ -300,9 +302,100 @@ body {
     }   
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1365px) {
     .container {
-        width: 1440px;
+        width: 100%;
+        padding: 0 100px;
+        margin-top: 80px;
+    }
+
+    .images_content {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        padding-left: 30px;
+    }
+
+    .images_content::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        content: url(./svg/star.svg);
+        width: 15px;
+        height: 15px;
+    }
+
+    .images_title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 125%;
+        margin-top: 20px;
+    }
+
+    .images_wrapper {
+        margin: 0 auto;
+    }
+
+    .images_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .images_list li {
+        margin-bottom: 20px;
+    }
+
+    .images_list li:nth-child(n+5) {
+        margin-bottom: 0;
+    }
+
+    .images_wrapper-card {
+        width: 49%;
+        height: 450px;
+        padding: 0 40px 40px 40px;
+    }
+
+    .images_item-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+    }
+
+    .images_item-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 145%;
+        letter-spacing: 0.015em;
+        margin-top: 20px;
+    }
+
+    .images_item-content button {
+        margin-top: 20px;
+    }
+
+    .images_item-link {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: -0.015em;
+        margin-top: 20px;
+    }
+
+    .images_item-link::after {
+        content: url(./svg/arrow.svg);
+        width: 16px;
+        height: 12px;    
+    } 
+}
+
+@media (min-width: 1366px) {
+    .container {
+        max-width: 1440px;
         padding: 0 150px;
         margin-top: 160px;
     }
@@ -354,9 +447,10 @@ body {
     }
 
     .images_wrapper-card {
-        width: 355px;
+        width: 32%;
+        max-width: 355px;
         height: 450px;
-        padding: 265px 40px 40px 40px;
+        padding: 0 40px 40px 40px;
     }
 
     .images_item-title {
